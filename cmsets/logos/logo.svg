@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg style="fill-rule:nonzero;clip-rule:evenodd;stroke-linecap:round;stroke-linejoin:round;" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg" version="1.1" xml:space="preserve">
+    <defs>
+        <radialGradient r="0" cx="511.878" id="RadialGradient" gradientTransform="matrix(1 0 0 1 0 0)" cy="512" gradientUnits="userSpaceOnUse">
+            <stop offset="0" stop-color="#000061" />
+            <stop stop-color="#2d188d" offset="0.419881" />
+            <stop offset="0.814429" stop-color="#130a74" />
+        </radialGradient>
+        <radialGradient r="0" cx="0.951638" gradientTransform="matrix(1 0 0 1 0 0)" gradientUnits="userSpaceOnUse" id="RadialGradient_2" cy="658.066">
+            <stop stop-color="#162b86" offset="0" />
+            <stop stop-color="#4953b6" offset="0.880622" />
+            <stop offset="1" stop-color="#4851b5" />
+        </radialGradient>
+    </defs>
+    <g opacity="1">
+        <path opacity="1" fill="url(#RadialGradient)" d="M511.878+0L922.373+202.816L1023.76+658.539L739.686+1024L284.071+1024L0+658.539L101.384+202.816L511.878+0Z" />
+        <path fill="url(#RadialGradient_2)" d="M511.878+1.22662L1022.81+658.066L0.951638+658.066L511.878+1.22662Z" opacity="1" />
+    </g>
+</svg>
