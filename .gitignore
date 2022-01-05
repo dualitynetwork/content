@@ -1,1 +1,9 @@
-.DS_Store
+*.*
+!.github/**
+!*.tex
+!*.svg
+!*.bib
+!*.txt
+!*.png
+!*.ttf
+!*.md
