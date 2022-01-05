@@ -1,0 +1,77 @@
+\documentclass[a4paper]{report}
+
+% Packages are intentionally placed per-line to avoid merge
+% conflicts when they are changed by two pull requests
+\usepackage[utf8]{inputenc}
+\usepackage[style=numeric]{biblatex}
+\usepackage[nonumberlist]{glossaries}
+\usepackage{ragged2e}
+\usepackage{textcomp}
+\usepackage{titling}
+
+% https://tex.stackexchange.com/a/60923
+\DeclareCiteCommand{\supercite}[\mkbibsuperscript]
+    {\iffieldundef{prenote}
+        {}
+        {\BibliographyWarning{Ignoring prenote argument}}%
+    \iffieldundef{postnote}
+        {}
+        {\BibliographyWarning{Ignoring postnote argument}}}
+    {\usebibmacro{citeindex}%
+     \bibopenbracket\usebibmacro{cite}\bibclosebracket}
+    {\supercitedelim}
+    {}
+
+% https://tex.stackexchange.com/a/408934
+\newsavebox{\abstractbox}
+\renewenvironment{abstract}
+{
+    \global\setbox\abstractbox=\vtop\bgroup
+    \begin{center}\bfseries\abstractname\end{center}
+}
+{
+    \par\egroup
+}
+
+\renewcommand{\maketitlehookd}
+{
+    \par\vfil
+    \box\abstractbox
+}
+
+% Initialise citations
+\addbibresource{duality.bib}
+
+% Initialise glossary
+\makeglossaries
+
+\title{Duality: A blockchain-assisted peer-to-peer health technology platform}
+\author{Duality Global Holdings Inc.}
+
+% Nullify date
+\date{\vspace{-5ex}}
+
+\begin{document}
+    % Title Page and Abstract
+    \begin{titlingpage}
+        \begin{abstract}
+            \justifying
+            \hspace{12mm} Duality\textsuperscript\textregistered is a decentralised application development platform
+            that aims to provide a data infrastructure and interoperability framework to help support the foundation
+            of information exchange across physical infrastructure, services, and applications to ensure compliance
+            with regulatory standards (i.e. HIPAA, GDPR) while promoting open standards (i.e. FHIR CMS-9115-F, and OAuth
+            2). Duality\textsuperscript\textregistered attempts to reduce the barrier of entry by developing a data
+            management platform that aims to be secure, scalable and provides developers with the infrastructure and
+            utilities needed to rapidly develop bleeding-edge products and services.
+        \end{abstract}
+        \maketitle
+    \end{titlingpage}
+
+    % Introduction
+    \chapter{Introduction}
+    \gls{smcrt} % required to trigger glossary generation
+
+    % Print glossary and bibliography
+    \printglossaries
+    \printbibliography
+\end{document}
